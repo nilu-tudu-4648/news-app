@@ -3,7 +3,7 @@ import { getLatestNews } from 'app/api/news'
 import { News } from 'app/types/news'
 import { Text, useSx, View, H1, P, Row, A, FlatList, H2, Image } from 'dripsy'
 import { useEffect, useState } from 'react'
-import { ListRenderItem, Platform } from 'react-native'
+import { Platform } from 'react-native'
 import { TextLink } from 'solito/link'
 
 export function HomeScreen() {
@@ -17,7 +17,7 @@ export function HomeScreen() {
     })
   }, [])
 
-  const renderItem: ListRenderItem<News> = ({ item }) => (
+  const renderItem = ({ item }) => (
     <View sx={{ paddingHorizontal: 16, marginBottom: 20 }}>
       <View
         sx={{
