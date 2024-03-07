@@ -17,7 +17,7 @@ export function HomeScreen() {
     })
   }, [])
 
-  const renderItem = ({ item }) => (
+  const renderItem = ({ item }:any) => (
     <View sx={{ paddingHorizontal: 16, marginBottom: 20 }}>
       <View
         sx={{
