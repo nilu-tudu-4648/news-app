@@ -1,9 +1,9 @@
 
 import { getLatestNews } from '../../api/news'
 import { News } from '../../types/news'
-import { Text, useSx, View, H1, P, Row, A, FlatList, H2, Image } from 'dripsy'
+import { Text, useSx, View, H1, P, Row, A, H2, Image } from 'dripsy'
 import { useEffect, useState } from 'react'
-import { Platform } from 'react-native'
+import { Platform,FlatList } from 'react-native'
 import { TextLink } from 'solito/link'
 
 export function HomeScreen() {
@@ -17,7 +17,7 @@ export function HomeScreen() {
     })
   }, [])
 
-  const renderItem = ({ item }:any) => (
+  const renderItem = ({ item }) => (
     <View sx={{ paddingHorizontal: 16, marginBottom: 20 }}>
       <View
         sx={{
@@ -52,10 +52,10 @@ export function HomeScreen() {
         </View>
       )}
       <FlatList
-        sx={{ marginTop: 16 }}
+        // style={{ marginTop: 16 }}
         data={latestNews}
         renderItem={renderItem}
-        keyExtractor={(item: News) => `${item.id}`}
+        keyExtractor={(item) => item.id}
       />
     </View>
   )
