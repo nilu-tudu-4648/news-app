@@ -1,6 +1,6 @@
 
-import { getLatestNews } from 'app/api/news'
-import { News } from 'app/types/news'
+import { getLatestNews } from '../../api/news'
+import { News } from '../../types/news'
 import { Text, useSx, View, H1, P, Row, A, FlatList, H2, Image } from 'dripsy'
 import { useEffect, useState } from 'react'
 import { Platform } from 'react-native'
