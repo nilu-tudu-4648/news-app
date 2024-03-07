@@ -17,7 +17,7 @@ export function HomeScreen() {
     })
   }, [])
 
-  const renderItem = ({ item }) => (
+  const renderItem =({ item }: { item: News }) => (
     <View sx={{ paddingHorizontal: 16, marginBottom: 20 }}>
       <View
         sx={{
@@ -55,7 +55,7 @@ export function HomeScreen() {
         // style={{ marginTop: 16 }}
         data={latestNews}
         renderItem={renderItem}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => String(item.id)}
       />
     </View>
   )
