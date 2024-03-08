@@ -18,6 +18,7 @@ export function NavigationProvider({
               home: '',
               'user-detail': 'user/:id',
               'latest-news': 'latest-news/:id',
+              'bluetooth':'bluetooth'
             },
           },
         }),

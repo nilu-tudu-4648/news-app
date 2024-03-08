@@ -1,6 +1,6 @@
 import { getNews } from 'app/api/news'
 import { News } from 'app/types/news'
-import { View, Text, Image, H1, P, Pressable } from 'dripsy'
+import { View, Text, Image, H1, P, ScrollView } from 'dripsy'
 import { useEffect, useState } from 'react'
 import { createParam } from 'solito'
 import { Link, TextLink } from 'solito/link'
@@ -20,6 +20,7 @@ export function NewsDetailScreen() {
 
   return (
     <View sx={{ flex: 1, padding: 16 }}>
+      <ScrollView>
       <View
         sx={{
           borderWidth: 1,
@@ -61,6 +62,7 @@ export function NewsDetailScreen() {
             </TextLink>
           </View>
       </View>
+      </ScrollView>
     </View>
   )
 }

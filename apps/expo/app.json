@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "solito-blank",
+    "name": "news",
     "slug": "solito-blank",
     "version": "1.0.0",
     "scheme": "solito-blank",
@@ -10,6 +10,14 @@
     ],
     "ios": {
       "bundleIdentifier": "com.solito.blank"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b7fc8003-b409-4266-9ac4-a5c90f24a6b8"
+      }
+    },
+    "android": {
+      "package": "com.solito.blank"
     }
   }
 }
